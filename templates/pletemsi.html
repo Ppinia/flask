@@ -11,6 +11,26 @@
     <title>pletem.si</title>
   </head>
   <body>
+{% extends "base.html" %}
+
+{% block content %}
+    <p>More about me :)</p>
+
+
+<form method="post" action="/contact">
+    <input type="text" name="contact-name" placeholder="Enter your name">
+    <br>
+
+    <input type="email" name="contact-email" placeholder="Enter email address">
+    <br>
+
+    <textarea name="contact-message" placeholder="Enter your message"></textarea>
+    <br>
+
+    <button class="btn btn-primary mt-3" type="submit">Submit</button>
+</form>
+
+{% endblock content %}
 
       <div class="container">
 
@@ -101,7 +121,7 @@
 
        <div class="col-sm-6">
          <div class="card border-light bg-dark text-white h-100">
-         <img src="Photos/4815522.jpg" class="card-img" alt="yellow">
+         <img src="static/img/4815522.jpg" class="card-img" alt="yellow">
     <div class="card-img-overlay">
       <div class="card-body">
         <h5 class="card-title">Special title treatment</h5>
